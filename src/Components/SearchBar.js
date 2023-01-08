@@ -16,7 +16,7 @@ const SearchBar = () => {
     const handleClick = async () => {
         setFlag(true)
         try {
-            const result = await axios.get(`https://api.github.com/search/repositories?q=topic:trending&sort=stars&order=desc&page=2&per_page=${loadData}`)
+            const result = await axios.get(`https://api.github.com/search/repositories?q=topic:trending&sort=stars&order=desc&per_page=${loadData}`)
             setRepo(result.data.items);
             console.log(result.data.items)
             setFlag(false)
